@@ -163,7 +163,7 @@ const fizzbuzz = (arr) => {
     else if (element % 3 === 0 && element % 5 === 0)
       arr2.push('Fizz Buzz');
     else
-      arr2.push();
+      arr2.push(element);
   });
   return arr2;
 };
