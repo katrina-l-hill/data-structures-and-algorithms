@@ -154,7 +154,20 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let arr2 = [];
+  arr.forEach(element => {
+    if (element % 3 === 0)
+      arr2.push('Fizz');
+    else if (element % 5 === 0)
+      arr2.push('Buzz');
+    else if (element % 3 === 0 && element % 5 === 0)
+      arr2.push('Fizz Buzz');
+    else
+      arr2.push();
+  });
+  return arr2;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
