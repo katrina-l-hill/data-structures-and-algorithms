@@ -74,7 +74,7 @@ const greeting = (word) => {
 const speaker = (words, callback) => {
   // Solution code here...
   let arr2 = [];
-  words.forEach((element) =>{
+  words.forEach((element) => {
     arr2.push(callback(element));
   });
   return arr2;
@@ -129,7 +129,14 @@ This function should use forEach to populate your grocery list based on the stor
 
 function createList(availableItems) {
   // Solution code here...
-}
+  let arr = [];
+  availableItems.forEach(item => {
+    if (item.available) {
+      arr.push(item.name);
+    }
+  });
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
