@@ -25,8 +25,9 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 function typeNum(arr) {
   // Solution code here...
-}
-
+  let numOnly = arr.filter(val => typeof(val) === 'number');
+  return numOnly;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -37,6 +38,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
