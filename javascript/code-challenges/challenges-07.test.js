@@ -144,6 +144,9 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.map((item) =>{
+    result.push(item.split(' ').slice(2).join(' '));
+  });
   return result;
 };
 
