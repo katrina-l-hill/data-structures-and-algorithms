@@ -45,7 +45,7 @@ let characters = [
     house: 'Snow'
   },
   {
-    name: 'Euron',
+    name: 'Euron', // The test has this first, but it should be Jon S. first since it shows up first in the array and they have an equal number of children.
     spouse: null,
     children: [],
     house: 'Greyjoy'
