@@ -111,7 +111,15 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  return str.matchAll(/[A-Z][a-zA-Z]*/);
+  //return str.matchAll(/[A-Z][a-zA-Z]*/g); /* Why isn't string.matchAll returning anything? */
+  let re = /^[A-Z][a-zA-Z]*/g;
+  let arr2 = [];
+  let parts = str.split(' ');
+  parts.map((part) => {
+    if (re.test(part))
+      arr2.push(part);
+  });
+  return arr2; //this works in replit, why not in npm?
 };
 
 /* ------------------------------------------------------------------------------------------------
