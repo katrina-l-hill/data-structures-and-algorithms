@@ -84,7 +84,7 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  const re = new RegExp('^[0-9]*$');
+  const re = new RegExp('.*[0-9].*');
   return re.test(input);
 };
 
