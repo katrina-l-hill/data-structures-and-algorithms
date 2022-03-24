@@ -84,6 +84,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  const re = new RegExp('^[0-9]*$');
+  return re.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,6 +97,8 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
+  const re = new RegExp('.*world.*');
+  return re.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
