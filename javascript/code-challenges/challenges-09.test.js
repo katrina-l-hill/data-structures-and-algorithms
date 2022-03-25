@@ -79,7 +79,7 @@ const updateNumbers = (obj) => {
   props.map((prop) =>
   {
     arr.push(`${prop}: ${obj[prop]}`);
-  })
+  });
   return arr;
 };
 
@@ -137,6 +137,9 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  arr.map((item) => {
+    houses.push(item.house);
+  });
   return houses;
 };
 
