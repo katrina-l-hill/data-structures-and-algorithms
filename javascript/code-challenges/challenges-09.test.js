@@ -1,5 +1,7 @@
 'use strict';
 
+const { has } = require("cheerio/lib/api/traversing");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -157,7 +159,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-
+  let hasChildren = false;
+  arr.map((person) => {
+    if (person.name === character && person.children !== undefined){
+      hasChildren = true;
+    }
+  });
+  return hasChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
