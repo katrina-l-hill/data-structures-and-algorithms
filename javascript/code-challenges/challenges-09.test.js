@@ -74,6 +74,13 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  let arr = [];
+  let props = Object.getOwnPropertyNames(obj);
+  props.map((prop) =>
+  {
+    arr.push(`${prop}: ${obj[prop]}`);
+  })
+  return arr;
 };
 
 
