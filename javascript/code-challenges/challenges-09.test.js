@@ -41,6 +41,16 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  let props = Object.getOwnPropertyNames(obj);
+  for(let i = 0; i < props.length; i++)
+  {
+    let val = obj[props[i]];
+    if(val === value)
+    {
+      return true;
+    }
+  }
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
