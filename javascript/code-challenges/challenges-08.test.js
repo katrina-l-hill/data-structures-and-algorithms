@@ -54,7 +54,14 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-  return charArray.sort((a, b) => a.children.length - b.children.length);
+  charArray.sort((a, b) => {
+    if (a.children.length === b.children.length) {
+     return a.house < b.house ? -1:1;
+    } else {
+    return a.children.length < b.children.length ? -1:1;
+    }
+  });
+  return charArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,14 +119,9 @@ Return an array containing all the matches.
 const isCapitalized = (str) => {
   // Solution code here...
   //return str.matchAll(/[A-Z][a-zA-Z]*/g); /* Why isn't string.matchAll returning anything? */
-  let re = /^[A-Z][a-zA-Z]*/g;
-  let arr2 = [];
-  let parts = str.split(' ');
-  parts.map((part) => {
-    if (re.test(part))
-      arr2.push(part);
-  });
-  return arr2; //this works in replit, why not in npm?
+  let reg = /[A-Z][a-zA-Z]*/gm;
+let capitals = str.match(reg);
+return capitals || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
