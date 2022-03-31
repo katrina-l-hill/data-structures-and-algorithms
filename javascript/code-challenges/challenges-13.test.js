@@ -46,6 +46,10 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  return arr.filter(item => {
+    const regex = /\:\)/;
+    return regex.test(item);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +62,21 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  let arr2 = [];
+  const regex = /[0-9]/;
+  arr.map(phoneNumber =>
+    {
+      let standardString = '';
+      for(let i = 0; i < phoneNumber.length; i++)
+      {
+        if(regex.test(phoneNumber[i]))
+        {
+          standardString += phoneNumber[i];
+        }
+      }
+      arr2.push(standardString);
+    });
+    return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,6 +89,15 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let oddChars = '';
+  for(let i = 1; i <= str.length; i++)
+  {
+    if(i % 2 != 0)
+    {
+      oddChars += str[i - 1];
+    }
+  }
+  return oddChars;
 };
 
 /* ------------------------------------------------------------------------------------------------
