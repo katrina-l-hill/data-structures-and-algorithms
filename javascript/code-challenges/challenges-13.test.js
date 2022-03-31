@@ -29,6 +29,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  let arr2 = [];
+  arr.map(str => {
+    arr2.push(str[0]);
+  });
+  return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
