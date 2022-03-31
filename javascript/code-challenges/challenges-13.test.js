@@ -108,7 +108,11 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
-  
+  let happyArr = arr.filter(item => {
+    const regex = /\:\)/;
+    return regex.test(item);
+  });
+  return arr.length === happyArr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
