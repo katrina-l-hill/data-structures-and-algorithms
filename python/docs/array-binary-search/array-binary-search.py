@@ -1,12 +1,18 @@
-def BinarySearch (array, 1, n, x):
-    if n >= 1:
-        middle = 1 + (n - 1) // 2
+import math
 
-        if array[middle] == x:
-            return middle
-        elif array[middle] > x:
-            return BinarySearch(array, 1, middle - 1, x)
+def BinarySearch (arr, search_term):
+    begin = 0
+    end = arr.length - 1
+    while begin <= end:
+        middle = math.floor(begin + end)
+        if arr(middle) < search_term:
+            begin = middle + 1
+        elif arr(middle) > search_term:
+            end = middle - 1
         else:
-            return BinarySearch(array, middle + 1, n, x)
-    else:
-        return -1
+            return middle
+            print('The index of the array\'s element that is equal to the value of the search key is {search_term}.')
+    return -1
+    print('The element is not in the array')
+
+
