@@ -6,22 +6,29 @@ def test_exists():
     assert LinkedList
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_instantiate():
     assert LinkedList()
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_empty_head():
     linked = LinkedList()
     assert linked.head is None
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_populated_head():
     linked = LinkedList()
     linked.insert("apple")
     assert linked.head.value == "apple"
+
+
+def test_head_next_insert_stuff_in_list():
+    linked = LinkedList()
+    linked.insert("apple")
+    linked.insert("banana")
+    assert linked.head.next.value == "apple"
 
 
 @pytest.mark.skip("TODO")

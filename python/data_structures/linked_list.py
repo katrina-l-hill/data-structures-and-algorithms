@@ -5,11 +5,17 @@ class LinkedList:
 
     def __init__(self):
         # initialization here
-        pass
+        self.head = None
 
-    def some_method(self):
-        # method body here
-        pass
+    # Create a new Node that has the correct value
+    def insert(self, value):
+        self.head = Node(value, self.head)
+
+
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
 
 
 class TargetError:
