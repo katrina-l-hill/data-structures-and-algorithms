@@ -9,14 +9,13 @@ class LinkedList:
 
     # Create a new Node that has the correct value
     def insert(self, value):
-        # method body here
-        new_node = Node("apple")
-        self.head = Node(value)
+        self.head = Node(value, self.head)
 
 
 class Node:
-    def __init__(self, value):
+    def __init__(self, value, next=None):
         self.value = value
+        self.next = next
 
 
 class TargetError:
