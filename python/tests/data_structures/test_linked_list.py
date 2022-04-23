@@ -31,7 +31,7 @@ def test_head_next_insert_stuff_in_list():
     assert linked.head.next.value == "apple"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_to_string_empty():
     linked_list = LinkedList()
 
