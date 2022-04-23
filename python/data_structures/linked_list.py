@@ -31,7 +31,7 @@ class LinkedList:
             return "NULL"
         else:
             while current is not None:
-                output += f"[{str(current.value)}] -> "
+                output += f"{{ {str(current.value)} }} -> "
                 current = current.next
             output += "NULL"
             return output
