@@ -74,3 +74,15 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run every possible test** - `pytest`
 - **Run filtered tests** - `pytest -k some_filter_text`
 - **Run in watch mode** - `ptw` or `pytest-watch`
+
+## Singly Linked List
+
+### Challenge
+
+This challenge was designed to test singly linked lists.
+
+### Approach & Efficiency
+
+The approach taken for this challenge was to work through the tests indivdually and define functions that would solve the tests.
+
+### API
