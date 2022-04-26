@@ -40,7 +40,7 @@ Each type of code challenge has slightly different instructions. Please refer to
     - i.e. `tests/test_linked_list.py`
     - Add to the tests written for this data structure to cover your new method(s) -->
 
-# Challenge Summary
+## Challenge Summary
 
 Extend the linked list to allow various insertion methods, such as append, insert before, and insert after.
 
