@@ -110,4 +110,12 @@ def test_insert_after_end():
     linked_list.append(2)
     linked_list.append(1)
     linked_list.insert_after(1, 4)
-    assert str(linked_list) == "{ 3 } -> { 4 } -> { 2 } -> { 1 } -> NULL"
+    assert str(linked_list) == "{ 3 } -> { 2 } -> { 1 } -> { 4 } -> NULL"
+
+def test_insert_after_middle():
+    linked_list = LinkedList()
+    linked_list.append(3)
+    linked_list.append(2)
+    linked_list.append(1)
+    linked_list.insert_after(2, 4)
+    assert str(linked_list) == "{ 3 } -> { 2 } -> { 4 } -> { 1 } -> NULL"
