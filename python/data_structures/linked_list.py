@@ -98,11 +98,3 @@ class Node:
 class TargetError:
     pass
 
-linked_list = LinkedList()
-linked_list = LinkedList()
-linked_list.append(3)
-linked_list.append(2)
-linked_list.append(1)
-linked_list.insert_after(2, 4)
-
-print(str(linked_list))
