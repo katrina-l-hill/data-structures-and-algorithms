@@ -88,6 +88,24 @@ class LinkedList:
                 return
             current_node = current_node.next
 
+    def kth_from_end(self, k):
+        if k < 0:
+            current_node = self.head
+            list_length = 0
+            while current_node is not None:
+                current_node = current_node.next
+                list_length += 1
+                return
+        current_node = self.head
+        for i in range(0, current_node -k):
+            current_node = current_node.next
+        print()
+
+
+
+
+
+
 class Node:
     # Constructor to create Node class that has properties for the value stored in the Node, and a pointer to the next Node
     def __init__(self, value, next=None):
