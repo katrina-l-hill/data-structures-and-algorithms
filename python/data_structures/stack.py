@@ -16,22 +16,28 @@ class Stack:
         # Add a new node with that value to the top of the stack with an O(1) Time performance.
         self.top = Node(value, self.top)
 
-    def pope(self):  # No arguments to pass in
+    def pop(self):  # No arguments to pass in
         # method body here
-        # Should return the node from the top of the stack
+        # Should raise exception when called on empty stack. Moved to the top of the method from the bottom due to error it was unreachable.
+        if not self.top:
+            raise InvalidOperationError("Method not allowed on empty collection")
+            # Should return the node from the top of the stack
         old_top = self.top
         # Remove the node from the top of the stack
         self.top = self.top.next
         old_top.next = None
+        # Returns teh value from the node from the top of the stack
         return old_top.value
-        # Should raise exception when called on empty stack
-            if not self.top:
-                raise InvalidOperationError("Method not allowed on empty collection")
 
     def peek(self):  # No arguments to pass in
         # method body here
-        pass
+        # Should raise an exception when called on empty stack
+        if not self.top:
+            raise InvalidOperationError("Method not allowed on empty collection")
+            # Returns the value of the node located at the top of the stack
+        return self.top.value
 
     def is_empty(self):  # No arguments to pass in
         # method body here
-        pass
+        # Returns a Boolean (True/False) indicating whether or not a stack is empty
+        return self.size == 0
