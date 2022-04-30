@@ -27,7 +27,7 @@ def test_push_onto_full():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_pop_single():
     s = Stack()
     s.push("apple")
