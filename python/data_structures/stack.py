@@ -26,7 +26,7 @@ class Stack:
         # Remove the node from the top of the stack
         self.top = self.top.next
         old_top.next = None
-        # Returns teh value from the node from the top of the stack
+        # Returns the value from the node from the top of the stack
         return old_top.value
 
     def peek(self):  # No arguments to pass in
