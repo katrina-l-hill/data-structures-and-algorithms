@@ -1,16 +1,8 @@
 # Data Structure: Extending an implementation
 
-<!-- - Work within the existing data structure implementation
-- Create a new method within the class that solves the code challenge
-  - Remember, you'll have access to `self` within your class methods
-- Tests
-  - You will have folder named `tests` and within it, a test file called `test_[data_structure].py`
-    - i.e. `tests/test_linked_list.py`
-    - Add to the tests written for this data structure to cover your new method(s) -->
-
 ## Challenge Summary
 
-Extend the linked list to allow various insertion methods, such as append, insert before, and insert after.
+The challenge for this assignment was to write a method that returns a node's value that is _k_ places from the tail of the linked list.
 
 ## Whiteboard Process
 
@@ -18,8 +10,7 @@ Extend the linked list to allow various insertion methods, such as append, inser
 
 ## Approach & Efficiency
 
-The approach to this challenge was to start out with the Feature Tasks methods to get the intial functions created, then to move on to testing the functionality with the unit tests. This approach made the most sense as I was able to modify the functions to pass the tests. No Big O was determined for this approach.
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The approach to this challenge was to determine the length of the list then add the parameter for the _k-th_ place from the tail of the linked list. To do this, the list needed to be traversed through to find the tail. The Big O for this approach is O(n) for time because the function increases linearly when looping through. The Big O for space is also O(n) because one element is being found from the list, which doesn't require additional space.
 
 ## Solution
 
