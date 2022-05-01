@@ -2,7 +2,8 @@ from hashlib import new
 from locale import currency
 from platform import node
 from pydoc import doc
-#from turtle import end_fill
+
+# from turtle import end_fill
 
 
 class LinkedList:
@@ -49,20 +50,20 @@ class LinkedList:
             self.head = new_node
             return
         last_node = self.head
-        while (last_node.next):
+        while last_node.next:
             last_node = last_node.next
         last_node.next = new_node
 
     def insert_before(self, value, new_value):
         # Need to identify if list is empty or not
         if self.head is None:
-            print('The list is empty')
+            print("The list is empty")
             return
         new_node = Node(new_value)
         prev_node = None
         current_node = self.head
         while current_node is not None:
-            if(current_node.value == value):
+            if current_node.value == value:
                 new_node.next = current_node
                 if prev_node is not None:
                     prev_node.next = new_node
@@ -75,14 +76,14 @@ class LinkedList:
     def insert_after(self, value, new_value):
         # Need to identify if list is empty or not
         if self.head is None:
-            print('The list is empty')
+            print("The list is empty")
             return
         new_node = Node(new_value)
         current_node = self.head
         while current_node is not None:
-            #traverse the linked list to find node with node.value == value
-            if(current_node.value == value):
-                #if match is found: current_node.next -> new_node AND set new_node.next -> node after
+            # traverse the linked list to find node with node.value == value
+            if current_node.value == value:
+                # if match is found: current_node.next -> new_node AND set new_node.next -> node after
                 new_node.next = current_node.next
                 current_node.next = new_node
                 return
@@ -97,13 +98,9 @@ class LinkedList:
                 list_length += 1
                 return
         current_node = self.head
-        for i in range(0, current_node -k):
+        for i in range(0, current_node - k):
             current_node = current_node.next
         print()
-
-
-
-
 
 
 class Node:
@@ -115,4 +112,3 @@ class Node:
 
 class TargetError:
     pass
-
