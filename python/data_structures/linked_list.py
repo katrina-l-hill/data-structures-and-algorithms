@@ -1,11 +1,3 @@
-from hashlib import new
-from locale import currency
-from platform import node
-from pydoc import doc
-
-# from turtle import end_fill
-
-
 class LinkedList:
     """
     This is a class that has a single head to start the initialization
@@ -97,7 +89,6 @@ class LinkedList:
             # value wasn't found in list raise error
             raise TargetError
 
-
     def kth_from_end(self, k):
         if k < 0:
             current_node = self.head
@@ -107,13 +98,9 @@ class LinkedList:
                 list_length += 1
                 return
         current_node = self.head
-        for i in range(0, current_node -k):
+        for i in range(0, current_node - k):
             current_node = current_node.next
         print()
-
-
-
-
 
 
 class Node:
