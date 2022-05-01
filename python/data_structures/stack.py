@@ -37,7 +37,8 @@ class Stack:
             # Returns the value of the node located at the top of the stack
         return self.top.value
 
-    def is_empty(self):  # No arguments to pass in
+    def is_empty(self, size):  # No arguments to pass in
         # method body here
         # Returns a Boolean (True/False) indicating whether or not a stack is empty
+        # Credit to Geeks for Geeks for self.size == 0; https://www.geeksforgeeks.org/stack-in-python/
         return self.size == 0
