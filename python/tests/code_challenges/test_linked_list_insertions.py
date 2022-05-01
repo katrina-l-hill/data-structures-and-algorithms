@@ -78,7 +78,7 @@ def test_insert_after_empty():
         linked_list.insert_after("radish", "zucchinni")
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_insert_after_missing():
     linked_list = LinkedList()
 
