@@ -15,6 +15,7 @@ def insertShiftArray(item_list, insert_value):
 
 
 def find_middle_index(item_list):
+    # get the item in the list, and place it in the middle
     count = get_item_count(item_list)
     if count % 2 == 0:
         return (int)(get_item_count(item_list) / 2)
