@@ -2,7 +2,8 @@ from hashlib import new
 from locale import currency
 from platform import node
 from pydoc import doc
-#from turtle import end_fill
+
+# from turtle import end_fill
 
 
 class LinkedList:
@@ -49,20 +50,21 @@ class LinkedList:
             self.head = new_node
             return
         last_node = self.head
-        while (last_node.next):
+        while last_node.next:
             last_node = last_node.next
         last_node.next = new_node
 
     def insert_before(self, value, new_value):
         # Need to identify if list is empty or not
         if self.head is None:
-            print('The list is empty')
-            return
+            raise TargetError
         new_node = Node(new_value)
         prev_node = None
         current_node = self.head
+        found = False
         while current_node is not None:
-            if(current_node.value == value):
+            if current_node.value == value:
+                found = True
                 new_node.next = current_node
                 if prev_node is not None:
                     prev_node.next = new_node
@@ -71,22 +73,30 @@ class LinkedList:
                 return
             prev_node = current_node
             current_node = current_node.next
+        if found == False:
+            # value wasn't found in list raise error
+            raise TargetError
 
     def insert_after(self, value, new_value):
         # Need to identify if list is empty or not
         if self.head is None:
-            print('The list is empty')
-            return
+            raise TargetError
         new_node = Node(new_value)
         current_node = self.head
+        found = False
         while current_node is not None:
-            #traverse the linked list to find node with node.value == value
-            if(current_node.value == value):
-                #if match is found: current_node.next -> new_node AND set new_node.next -> node after
+            # traverse the linked list to find node with node.value == value
+            if current_node.value == value:
+                # if match is found: current_node.next -> new_node AND set new_node.next -> node after
+                found = True
                 new_node.next = current_node.next
                 current_node.next = new_node
                 return
             current_node = current_node.next
+        if found == False:
+            # value wasn't found in list raise error
+            raise TargetError
+
 
 class Node:
     # Constructor to create Node class that has properties for the value stored in the Node, and a pointer to the next Node
@@ -95,6 +105,5 @@ class Node:
         self.next = next
 
 
-class TargetError:
+class TargetError(BaseException):
     pass
-
