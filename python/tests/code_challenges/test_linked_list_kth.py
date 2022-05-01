@@ -24,7 +24,7 @@ def test_kth_from_end_one():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_kth_from_end_two():
     linked_list = LinkedList()
     values = ["apples", "bananas", "cucumbers"]
