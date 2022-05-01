@@ -89,6 +89,8 @@ class LinkedList:
         while current_node is not None:
             current_node = current_node.next
             list_length += 1
+        if k > (list_length - 1):
+            raise TargetError
         current_node = self.head
         for i in range(1, list_length - k):
             current_node = current_node.next
