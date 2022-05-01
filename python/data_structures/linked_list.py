@@ -90,18 +90,20 @@ class LinkedList:
             raise TargetError
 
     def kth_from_end(self, k):
-        if k < 0:
-            current_node = self.head
-            list_length = 0
-            while current_node is not None:
-                current_node = current_node.next
-                list_length += 1
-                return
-        current_node = self.head
-        for i in range(0, current_node - k):
-            current_node = current_node.next
-        print()
 
+        if k < 0:
+            raise TargetError
+        current_node = self.head
+        list_length = 0
+        while current_node is not None:
+            current_node = current_node.next
+            list_length += 1
+        if k > (list_length - 1):
+            raise TargetError
+        current_node = self.head
+        for i in range(1, list_length - k):
+            current_node = current_node.next
+        return current_node.value
 
 class Node:
     # Constructor to create Node class that has properties for the value stored in the Node, and a pointer to the next Node
