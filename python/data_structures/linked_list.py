@@ -82,6 +82,7 @@ class LinkedList:
             current_node = current_node.next
 
     def kth_from_end(self, k):
+
         if k < 0:
             raise TargetError
         current_node = self.head
