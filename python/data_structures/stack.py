@@ -2,13 +2,6 @@ from data_structures.linked_list import Node
 from data_structures.invalid_operation_error import InvalidOperationError
 
 
-class Node:
-    # Constructor to create Node class that has properties for the value stored in the Node, and a pointer to the next Node
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next = next
-
-
 class Stack:
     """
     Create a Stack class that has a top property. It creates an empty Stack when instantiated.
