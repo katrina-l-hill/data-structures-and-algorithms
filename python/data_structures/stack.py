@@ -18,34 +18,36 @@ class Stack:
         # initialization here
         self.top = None
 
-    def push(self, value):  # No arguments to pass in
+    def push(self, value):  # Passing in value as an argument
         # method body here
         # Add a new node with that value to the top of the stack with an O(1) Time performance.
-        self.top = Node(value, self.top)
+        if self.top is None:
+            # adding first item, set next to None
+            new_node = Node(value, None)
+            self.top = new_node
+        else:
+            new_node = Node(value, self.top)
+            self.top = new_node
 
     def pop(self):  # No arguments to pass in
         # method body here
         # Should raise exception when called on empty stack. Moved to the top of the method from the bottom due to error it was unreachable.
-        if not self.top:
+        if self.top is None:
             raise InvalidOperationError("Method not allowed on empty collection")
-            # Should return the node from the top of the stack
-        old_top = self.top
-        # Remove the node from the top of the stack
+        # Store value from current top that is being popped off
+        return_value = self.top.value
         self.top = self.top.next
-        old_top.next = None
-        # Returns the value from the node from the top of the stack
-        return old_top.value
+        return return_value
 
     def peek(self):  # No arguments to pass in
         # method body here
-        # Should raise an exception when called on empty stack
-        if not self.top:
+        # Should raise exception when called on empty stack. Moved to the top of the method from the bottom due to error it was unreachable.
+        if self.top is None:
             raise InvalidOperationError("Method not allowed on empty collection")
-            # Returns the value of the node located at the top of the stack
+        # Store value from current top that is being popped off
         return self.top.value
 
-    def is_empty(self, size):  # No arguments to pass in
+    def is_empty(self):  # No arguments to pass in
         # method body here
         # Returns a Boolean (True/False) indicating whether or not a stack is empty
-        # Credit to Geeks for Geeks for self.size == 0; https://www.geeksforgeeks.org/stack-in-python/
-        return self.size == 0
+        return self.top is None
