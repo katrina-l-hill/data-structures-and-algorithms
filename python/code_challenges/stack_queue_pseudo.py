@@ -1,28 +1,58 @@
+from nis import cat
+from operator import truediv
+
+from black import out
 from data_structures.stack import Stack
-from data_structures.linked_list import Node
 
 
 class PseudoQueue:
-    def __init__(self, stack_1, stack_2):
-        self.stack_1 = stack_1
-        self.stack_2 = stack_2
+    def __init__(self):
+        self.stack_1 = Stack()
+        self.stack_2 = Stack()
+
+    def __str__(self):
+        # add stack 1 to output
+        output = "Stack 1: "
+        current = self.stack_1.top
+        if current == None:
+            output += "NULL"
+        else:
+            while current is not None:
+                output += f"{{ {str(current.value)} }} -> "
+                current = current.next
+            output += "NULL"
+
+        # add stack 2 to output
+        output += "\nStack 2: "
+        current = self.stack_2.top
+        if current == None:
+            output += "NULL"
+        else:
+            while current is not None:
+                output += f"{{ {str(current.value)} }} -> "
+                current = current.next
+            output += "NULL"
+        return output
 
     def enqueue(self, value):
         self.stack_1.push(value)
 
     def dequeue(self):
-        # temp = self.stack_1.pop()
-        # self.stack_2.push(temp)
         return_value = None
-        value = self.stack_1.pop()
-        while value is not None:
-            if self.stack_1.peek() != None:
-                self.stack_2(value)
-            else:
-                return_value = self.stack_1.peek()
-            value = self.stack_1.pop()
-        value = self.stack_2.pop()
-        while value is not None:
-            self.stack_1.push(value)
-            value = self.stack_2.pop()
+        cont = True
+        while cont:
+            try:
+                value = self.stack_1.pop()
+                return_value = value
+                self.stack_1.peek()
+                self.stack_2.push(value)
+            except:
+                cont = False
+        cont = True
+        while cont:
+            try:
+                value = self.stack_2.pop()
+                self.stack_1.push(value)
+            except:
+                cont = False
         return return_value
