@@ -39,15 +39,18 @@ class PseudoQueue:
 
     def dequeue(self):
         return_value = None
+        # find return value and move others to stack 2
         cont = True
         while cont:
             try:
                 value = self.stack_1.pop()
                 return_value = value
+                # next line of code will raise error and go to except at last stack item
                 self.stack_1.peek()
                 self.stack_2.push(value)
             except:
                 cont = False
+        # return non-dequeued items to stack 1
         cont = True
         while cont:
             try:
