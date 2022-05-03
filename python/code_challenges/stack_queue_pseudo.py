@@ -1,7 +1,3 @@
-from nis import cat
-from operator import truediv
-
-from black import out
 from data_structures.stack import Stack
 
 
