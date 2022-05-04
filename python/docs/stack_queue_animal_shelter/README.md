@@ -10,7 +10,7 @@ Create enqueue and dequeue methods under a class called AnimalShelter that will 
 
 ## Approach & Efficiency
 
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The approach for this challenge is to define enqueue and dequeue methods. The enqueue method takes in animal as an argument. The animal can be either a dog or cat object. The dequeue method takes in pref as an argument. If pref if not a dog or cat, then return None. Create a while loop to iterate through the aninals in stack_2 and check if it's the preferred animal. If not, return to stack_1.
 
 ## Solution
 
