@@ -23,7 +23,7 @@ def test_validates_two_braces():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_fails_two_braces_flipped():
     actual = multi_bracket_validation("}{")
     expected = False
