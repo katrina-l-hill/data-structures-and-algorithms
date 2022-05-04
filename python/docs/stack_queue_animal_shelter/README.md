@@ -2,7 +2,7 @@
 
 ## Challenge Summary
 
-<!-- Description of the challenge -->
+Create enqueue and dequeue methods under a class called AnimalShelter that will take out the first animal that went into the queue (FIFO).
 
 ## Whiteboard Process
 
