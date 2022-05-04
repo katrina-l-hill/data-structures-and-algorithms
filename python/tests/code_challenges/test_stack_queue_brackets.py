@@ -9,7 +9,7 @@ def test_validates_two_square_brackets():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_fails_two_square_brackets_flipped():
     actual = multi_bracket_validation("][")
     expected = False
