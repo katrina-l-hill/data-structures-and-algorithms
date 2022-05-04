@@ -35,10 +35,10 @@ class AnimalShelter:
 
     def dequeue(self, pref):
         return_value = None
-        # move items to stack 2
+        # move animals to stack 2
         while not self.stack_1.is_empty():
             self.stack_2.push(self.stack_1.pop())
-        # move items back to stack 1 grabbing first instance of pref to return
+        # move animals back to stack 1 grabbing first instance of pref to return
         while not self.stack_2.is_empty():
             temp = self.stack_2.pop()
             # only grab the first match of pref
@@ -51,7 +51,7 @@ class AnimalShelter:
                     # not a match, push to stack 1
                     self.stack_1.push(temp)
             else:
-                # push remaining items onto stack 1
+                # push remaining animals onto stack 1
                 self.stack_1.push(temp)
         return return_value
 
