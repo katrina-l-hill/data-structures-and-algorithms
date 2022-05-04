@@ -11,6 +11,18 @@ class Stack:
         # initialization here
         self.top = None
 
+    def __str__(self):
+        output = ""
+        current = self.top
+        if current == None:
+            return "NULL"
+        else:
+            while current is not None:
+                output += f"{{ {str(current.value)} }} -> "
+                current = current.next
+            output += "NULL"
+            return output
+
     def push(self, value):  # Passing in value as an argument
         # method body here
         # Add a new node with that value to the top of the stack with an O(1) Time performance.
