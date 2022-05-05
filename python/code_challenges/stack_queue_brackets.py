@@ -14,6 +14,7 @@ def multi_bracket_validation(input):
                 return False
             temp = stack.pop()
             # if temp doesn't match type of closing bracket
+            # match & case to evaluate the bracket expressions for multiple bracket values. Referenced from: https://docs.python.org/3/whatsnew/3.10.html
             match temp:
                 case "{":
                     if not char == "}":
