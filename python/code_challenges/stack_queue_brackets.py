@@ -18,15 +18,12 @@ def multi_bracket_validation(input):
                 case "{":
                     if not char == "}":
                         return False
-                    break
                 case "[":
                     if not char == "]":
                         return False
-                    break
                 case "(":
                     if not char == ")":
                         return False
-                    break
     if not stack.is_empty():
         return False
     return True
