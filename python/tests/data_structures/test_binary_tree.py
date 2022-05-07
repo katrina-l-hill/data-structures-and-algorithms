@@ -2,7 +2,7 @@ import pytest
 from data_structures.binary_tree import BinaryTree, Node
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_node_exists():
     assert Node
 
@@ -70,4 +70,3 @@ def tree():
     tree.root.right.right = Node("g")
 
     return tree
-
