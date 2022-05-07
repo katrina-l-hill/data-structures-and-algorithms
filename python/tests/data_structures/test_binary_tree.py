@@ -7,7 +7,7 @@ def test_node_exists():
     assert Node
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_create_node():
     node = Node("apple")
     assert node
