@@ -15,7 +15,6 @@ class BinaryTree:
 
     def __init__(self):
         self.root = None
-        pass
 
     def pre_order(self):
         def pre_order_recursive(node, current_list):
