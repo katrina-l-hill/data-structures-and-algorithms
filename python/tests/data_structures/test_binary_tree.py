@@ -15,12 +15,12 @@ def test_create_node():
     assert node.right is None
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_tree_exists():
     assert BinaryTree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_tree_root_exists():
     tree = BinaryTree()
     assert tree.root is None
