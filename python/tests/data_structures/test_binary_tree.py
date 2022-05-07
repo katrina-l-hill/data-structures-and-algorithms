@@ -2,12 +2,12 @@ import pytest
 from data_structures.binary_tree import BinaryTree, Node
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_node_exists():
     assert Node
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_create_node():
     node = Node("apple")
     assert node
@@ -15,32 +15,32 @@ def test_create_node():
     assert node.right is None
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_tree_exists():
     assert BinaryTree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_tree_root_exists():
     tree = BinaryTree()
     assert tree.root is None
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_pre_order(tree):
     actual = tree.pre_order()
     expected = ["a", "b", "d", "e", "c", "f", "g"]
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_in_order(tree):
     actual = tree.in_order()
     expected = ["d", "b", "e", "a", "f", "c", "g"]  # left, root, right
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_post_order(tree):
     actual = tree.post_order()
     expected = ["d", "e", "b", "f", "g", "c", "a"]
@@ -70,4 +70,3 @@ def tree():
     tree.root.right.right = Node("g")
 
     return tree
-
