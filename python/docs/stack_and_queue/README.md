@@ -12,4 +12,7 @@ My approach will be to create Node, stack, and queue classes, and add the push, 
 
 ## API
 
-There are no APIs used in this assignment.
+push(): this method pushes an ele into the stack.
+pop(): this method removes an element from the stack.
+peek(): this method shows the topmost element in the stack.
+is_empty(): this method identifies if the top value is Null.
