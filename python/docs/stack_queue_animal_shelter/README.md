@@ -6,7 +6,7 @@ Create enqueue and dequeue methods under a class called AnimalShelter that will 
 
 ## Whiteboard Process
 
-![Whiteboard image](./)
+![Whiteboard image](./stack-queue-animal-shelter.png)
 
 ## Approach & Efficiency
 
