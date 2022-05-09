@@ -1,4 +1,3 @@
-from urllib3 import Retry
 from data_structures.binary_tree import BinaryTree, Node
 
 

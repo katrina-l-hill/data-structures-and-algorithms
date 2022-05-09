@@ -54,3 +54,33 @@ class BinaryTree:
         post_order_list = []
         post_order_recursive(self.root, post_order_list)
         return post_order_list
+
+    def find_maximum_value(self):
+        def traverse_for_max(root, max=0):
+            if root is None:
+                return max
+            if max < root.value:
+                max = root.value
+
+            left_side_value = traverse_for_max(root.left, max)
+            if max < left_side_value:
+                max = left_side_value
+
+            right_side_value = traverse_for_max(root.right, max)
+            if max < right_side_value:
+                max = right_side_value
+
+            return max
+
+        return traverse_for_max(self.root)
+
+        # max = self.root.value
+        # while self.root:
+        #     temp = self.root.pop(0)
+        #     if temp.value > max:
+        #         max = temp.value
+        #     if temp.node.left:
+        #         self.root.append(temp.node.left)
+        #     if temp.node.right:
+        #         self.root.append(temp.node.right)
+        # return max
