@@ -23,7 +23,7 @@ def test_tree_exists():
 # @pytest.mark.skip("TODO")
 def test_tree_root_exists():
     tree = BinaryTree()
-    assert tree.root is None
+    assert tree._root is None
 
 
 # @pytest.mark.skip("TODO")
@@ -61,12 +61,12 @@ def tree():
 
     tree = BinaryTree()
 
-    tree.root = Node("a")
-    tree.root.left = Node("b")
-    tree.root.right = Node("c")
-    tree.root.left.left = Node("d")
-    tree.root.left.right = Node("e")
-    tree.root.right.left = Node("f")
-    tree.root.right.right = Node("g")
+    tree._root = Node("a")
+    tree._root.left = Node("b")
+    tree._root.right = Node("c")
+    tree._root.left.left = Node("d")
+    tree._root.left.right = Node("e")
+    tree._root.right.left = Node("f")
+    tree._root.right.right = Node("g")
 
     return tree

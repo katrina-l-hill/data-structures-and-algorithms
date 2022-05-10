@@ -1,8 +1,11 @@
+from data_structures.queue import Queue
+
+
 class Node:
-    def __init__(self, value):
+    def __init__(self, value, right=None, left=None):
         self.value = value
-        self.right = None
-        self.left = None
+        self.right = left
+        self.left = right
 
     def __str__(self):
         return self.value
@@ -13,8 +16,21 @@ class BinaryTree:
     Define a method for each of the depth traversals
     """
 
-    def __init__(self):
+    def __init__(self, root=None, values=None):
         self.root = None
+        if values:
+            for value in values:
+                self.add(value)
+
+    def __str__(self):
+        if self.root is None:
+            return "None"
+        else:
+            list = self.pre_order()
+            output = ""
+            for item in list:
+                output += f"{item} "
+            return output
 
     def pre_order(self):
         def pre_order_recursive(node, current_list):
@@ -75,27 +91,21 @@ class BinaryTree:
         return traverse_for_max(self.root)
 
     def add(self, value):
-
         node = Node(value)
-
         if not self.root:
             self.root = node
             return
-
         breadth = Queue()
-
         breadth.enqueue(self.root)
-
         while not breadth.is_empty():
             front = breadth.dequeue()
             if not front.left:
                 front.left = node
                 return
-        else:
-            breadth.enqueue(front.left)
-
-        if not front.right:
-            front.right = node
-            return
-        else:
-            breadth.enqueue(front.right)
+            else:
+                breadth.enqueue(front.left)
+            if not front.right:
+                front.right = node
+                return
+            else:
+                breadth.enqueue(front.right)
