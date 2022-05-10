@@ -1,5 +1,5 @@
 from data_structures.binary_tree import BinaryTree
 
 
-def breadth_first():
+def breadth_first(tree):
     pass
