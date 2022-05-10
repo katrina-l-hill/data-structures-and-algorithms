@@ -73,14 +73,3 @@ class BinaryTree:
             return max
 
         return traverse_for_max(self.root)
-
-        # max = self.root.value
-        # while self.root:
-        #     temp = self.root.pop(0)
-        #     if temp.value > max:
-        #         max = temp.value
-        #     if temp.node.left:
-        #         self.root.append(temp.node.left)
-        #     if temp.node.right:
-        #         self.root.append(temp.node.right)
-        # return max
