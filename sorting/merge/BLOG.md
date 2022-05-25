@@ -13,3 +13,7 @@
 ### Big O Efficiency
 
 Merge sort is a recursive algorithm, so the time complexity is O(n) and the space complexity is O(n).
+
+### Code
+
+![Code](python/code_challenges/merge_sort.py)
