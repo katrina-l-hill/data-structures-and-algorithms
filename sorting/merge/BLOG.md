@@ -4,26 +4,12 @@
 
 ### Visual
 
-![Visual](./)
+![Visual](./merge-sort-pseudo-code.png)
 
 ### Trace/Step-through
 
-[8, 4, 23, 42]
-
-- 1st pass
-
-[]
-
-- 2nd pass
-
-[]
-
-- 3rd pass
-
-- 4th pass
-
-- 5th pass
-
-- 6th pass
+![Step-through](./merge-sort-step-through.png)
 
 ### Big O Efficiency
+
+Merge sort is a recursive algorithm, so the time complexity is O(n) and the space complexity is O(n).
