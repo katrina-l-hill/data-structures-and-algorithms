@@ -19,4 +19,7 @@ def first_repeated_word(input):
                 else:
                     word_set.add(current_word)
                     current_word = ""
+    if len(current_word) > 0:
+        if current_word in word_set:
+            return current_word
     return None
