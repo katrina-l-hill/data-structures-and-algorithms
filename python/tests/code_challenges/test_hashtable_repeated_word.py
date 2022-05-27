@@ -23,7 +23,7 @@ def test_a_a():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_a_b_a():
     actual = first_repeated_word("apple banana apple")
     expected = "apple"
