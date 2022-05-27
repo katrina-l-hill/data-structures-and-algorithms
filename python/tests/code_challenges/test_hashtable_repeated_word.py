@@ -9,7 +9,7 @@ def test_blank():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_no_repeat():
     actual = first_repeated_word("nobody here but us chickens")
     expected = None
