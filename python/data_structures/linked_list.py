@@ -1,3 +1,6 @@
+from locale import currency
+
+
 class LinkedList:
     """
     This is a class that has a single head to start the initialization
@@ -104,6 +107,15 @@ class LinkedList:
         for i in range(1, list_length - k):
             current_node = current_node.next
         return current_node.value
+
+    def display(self):
+        current = self.head
+        output = []
+        while not current == None:
+            output.append(list(current.value))
+            current = current.next
+        return output
+
 
 class Node:
     # Constructor to create Node class that has properties for the value stored in the Node, and a pointer to the next Node
