@@ -1,4 +1,4 @@
-from ctypes import sizeof
+from data_structures.linked_list import LinkedList
 
 
 class Hashtable:
@@ -7,59 +7,86 @@ class Hashtable:
     """
 
     def __init__(self, size=1024):
-        # initialization here
-        pass
         self.size = size
-        self.buckets = None
+        self.buckets = [None] * self.size
 
-    def set(self, key, value):
-        # compute the hash
-        index = self.hash(key)
-        pass
-
-        # hash the key
-
-        # set the key and value pair in the table
-
-        # handle collisions
-
-        # if key already exists, replace its value from teh value argument argument given in this method
-
-        # returns nothing
-
-    def get(self, key):
-        # 1 - compute the hash
-        index = self.hash(key)
-
-        # 2 - go to the first node in the list at the bucket
-
-        # 3 - traverse the linked list at this node
-
-        # 4 while loop for node
-
-        # 5 if statement for if node is the key or None
-        # return the key is the current value
-        # else return None
-        pass
-
-        # return value associated with that key in the table
-
-    def contains(self, key):
-        # compute the hash
-        index = self.hash(key)
-        pass
-
-        # returns a Boolean indicating if the key exists in the table already
-
-    def keys(self):
-        # compute the hash
-        pass
-
-        # returns a collection of keys
+    def __str__(self):
+        output = ""
+        for i in range(len(self.buckets)):
+            if self.buckets[i] != None:
+                current = self.buckets[i].head
+                while current != None:
+                    pair = current.value
+                    output += f"({pair[0]}: {pair[1]})\n"
+                    current = current.next
+        return output
 
     def hash(self, key):
-        # method body here
-        pass
-
-        # returns an index in the collection for that key
+        sum_of_chars = 0
+        for char in key:
+            sum_of_chars += ord(char)
+        primed = sum_of_chars * 599
+        index = primed % self.size
         return index
+
+    def set(self, key, value):
+        index = self.hash(key)
+        bucket = self.buckets[index]
+        if bucket is None:
+            bucket = LinkedList()
+            self.buckets[index] = bucket
+        current = bucket.head
+        replaced = False
+        while current != None:
+            pair = current.value
+            if len(pair) > 0 and pair[0] == key:
+                replaced = True
+                current.value = (key, value)
+            current = current.next
+        if not replaced:
+            bucket.insert((key, value))
+
+    def get(self, key):
+        index = self.hash(key)
+        bucket = self.buckets[index]
+        if not bucket == None:
+            current = bucket.head
+            while current:
+                pair = current.value
+                current_key = pair[0]
+                if current_key == key:
+                    return pair[1]
+                current = current.next
+        return None
+
+    def contains(self, key):
+        index = self.hash(key)
+        bucket = self.buckets[index]
+        if not bucket == None:
+            current = bucket.head
+            while current:
+                pair = current.value
+                current_key = pair[0]
+                if current_key == key:
+                    return True
+                current = current.next
+        return False
+
+    def keys(self):
+        keyset = set()
+        for bucket in self.buckets:
+            if bucket != None:
+                current = bucket.head
+                while current != None:
+                    pair = current.value
+                    keyset.add(pair[0])
+                    current = current.next
+        return keyset
+
+
+# test code with print
+hashtable = Hashtable(1024)
+hashtable.set("ahmad", 30)
+hashtable.set("silent", True)
+hashtable.set("listen", "to me")
+print(hashtable.keys())
