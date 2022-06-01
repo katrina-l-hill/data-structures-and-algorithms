@@ -34,11 +34,12 @@ class BinaryTree:
 
     def pre_order(self):
         def pre_order_recursive(node, current_list):
-            current_list.append(node.value)
-            if node.left is not None:
-                pre_order_recursive(node.left, current_list)
-            if node.right is not None:
-                pre_order_recursive(node.right, current_list)
+            if node:
+                current_list.append(node.value)
+                if node.left is not None:
+                    pre_order_recursive(node.left, current_list)
+                if node.right is not None:
+                    pre_order_recursive(node.right, current_list)
             return current_list
 
         pre_order_list = []
