@@ -8,7 +8,7 @@ This challenge requires a function that left joins two hashmaps into a single da
 
 ## Whiteboard Process
 
-![Whiteboard image]()
+![Whiteboard image](./hashtable-left-join.png)
 
 ## Approach & Efficiency
 
