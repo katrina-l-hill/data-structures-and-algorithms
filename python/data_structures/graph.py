@@ -5,12 +5,16 @@ class Graph:
 
     def __init__(self):
         # initialization here
-        pass
+        self._adjacency_list = {}
 
-    def some_method(self):
-        # method body here
-        pass
+    def add_node(self, value):
+        return Vertex(value)
+
+    def size(self):
+        return len(self._adjacency_list)
+        # could also use key(method)
 
 
 class Vertex:
-    pass
+    def __init__(self, value):
+        self.value = value
