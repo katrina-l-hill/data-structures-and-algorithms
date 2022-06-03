@@ -6,10 +6,12 @@ def test_exists():
     assert Graph
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_node():
 
     graph = Graph()
+
+    added_node = graph.add_node("spam")  # check added node's value
 
     expected = "spam"  # a vertex's value that comes back
 
@@ -18,7 +20,7 @@ def test_add_node():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_size_empty():
 
     graph = Graph()
