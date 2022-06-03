@@ -1,7 +1,6 @@
 # 401 Data Structures, Code Challenges
 
 ## Graphs
-<!-- Short summary or background information -->
 
 ## Challenge Summary
 
