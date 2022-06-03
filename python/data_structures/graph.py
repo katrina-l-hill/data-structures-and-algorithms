@@ -1,6 +1,6 @@
 class Graph:
     """
-    Put docstring here
+    Utilized instructor's demo code and tests for this code challenge.
     """
 
     def __init__(self):
