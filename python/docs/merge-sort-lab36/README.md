@@ -1,6 +1,6 @@
 # 401 Data Structures, Code Challenges
 
-## Merge Sort
+## Valid Parentheses
 
 ## Challenge Summary
 
@@ -8,7 +8,7 @@ The challenge for this assignment was to write a function that merge two non-dec
 
 ## Whiteboard Process
 
-![Whiteboard image](./code_challenge_36_merge_sort.png)
+![Whiteboard image](.)
 
 ## Approach & Efficiency
 
