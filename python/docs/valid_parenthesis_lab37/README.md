@@ -1,6 +1,6 @@
 # 401 Data Structures, Code Challenges
 
-## Merge Sort
+## Valid Parenthesis
 
 ## Challenge Summary
 
